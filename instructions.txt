@@ -1,3 +1,30 @@
 Here is the instructions on how to create this project and add it to Eclipse.
 
-1- Download
+--- Setting up the Java Project ---
+
+1- Download this project from githup either by cloning it or download the zip file and extracting it.
+  git clone https://github.com/brentrwill/week8.git
+  or  
+  https://github.com/brentrwill/week8/archive/refs/heads/main.zip
+
+2- Once you have the project downloaded, we will then run maven to pull in the Jar file for the JDBC connection.
+  mvn clean install
+
+3- Now, we want to create a Java Project and let maven do the work for us. The below command will create a Java project for us so we can include this in Eclipse.
+  mvn eclipse:eclipse
+
+4- Now that we have the Eclipse project created, you now open Eclipse and click File->import->General->Existing Projects into Workspace. Then you will find the folder  where you downlaod and ran the above maven command and import the project.
+
+
+--- Setting up Mysql ---
+
+1- Open DBeaver, right click on Databases and create a new database named "hotel_systems".
+2- Right click on your new database and open a sql editor.
+3- Copy the content of this file: https://github.com/brentrwill/week8/blob/main/schema.sql into your new sql editor.
+4- Execute run sql script on the right side of the editor and it should create all your tables.
+Note: - You can re-run this as many times as you want to play around with the data.
+
+--- Running the example ---
+
+1- Edit this file in Eclipse: week8/main/src/main/java/projects/dao/DbConnection.java by replacing the username and/ro password to the one that you setup when you created your Mysql install.
+2- Right client on this file in week8/main/src/mainjava/projects/ProjectsApp.java and run as Java Application.
