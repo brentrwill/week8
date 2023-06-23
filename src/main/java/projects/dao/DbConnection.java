@@ -7,7 +7,7 @@ import projects.exception.DbException;
 
 public class DbConnection {
   private static String HOST = "localhost";
-  private static String PASSWORD = "will1rule";
+  private static String PASSWORD = "%password%";
   private static int PORT = 3306;
   private static String SCHEMA = "hotel_system";
   private static String USER = "root";
